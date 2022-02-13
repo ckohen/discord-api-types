@@ -25,6 +25,10 @@ export function isDMInteraction(interaction: APIInteraction): interaction is API
 	return Reflect.has(interaction, 'user');
 }
 
+export function isTest(test: boolean): test is true {
+	return test;
+}
+
 /**
  * A type-guard check for guild interactions
  * @param interaction The interaction to check against
